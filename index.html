@@ -13,7 +13,9 @@
          --color-f: #F2B544;
          --color-b: #074A59;
          --color-dim: #08404E;
+         --padding-page-tb: 10rem;
      }
+     @media only screen and (max-device-width: 1024px) { :root { --padding-page-tb: 2rem; } }
      html, body {
          height: 100%;
          margin: 0;
@@ -35,7 +37,7 @@
          outline: none;
          box-sizing:border-box;
          border: 0.05rem solid var(--color-f);
-         border-radius: 0.2rem;
+         border-radius: 0.4rem;
          padding: 0.4rem 1rem;
          vertical-align: middle;
          background-color: var(--color-b);
@@ -46,7 +48,7 @@
      button:hover { background-color: var(--color-dim); }
      div.grid {
          max-width: 1000px;
-         margin: 10rem auto;
+         margin: var(--padding-page-tb) auto;
          display: grid;
          place-content: center;
          grid-template-columns: repeat(auto-fill, 16rem);
